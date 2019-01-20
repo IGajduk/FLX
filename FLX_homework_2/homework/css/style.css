@@ -1,0 +1,145 @@
+@media print {
+.tm-sidebar, #about, .heading, .tm-team-description, .blocks, .tm-sidebar, #ideas, .tm-content-box{
+    display: none;
+}
+    body{
+        font-size: 130%;
+    }
+    section::before {
+        content: "";
+        display: none;
+    }
+    #home{
+        display: block;
+        height: auto;
+        margin-bottom: 0px;
+    }
+    .tm-main-content .tm-team-description-container{
+        width: 200%;
+        text-align: left;
+    }
+    .tm-main-content .tm-team-description-container p{
+        text-indent: 8%
+    }
+    .tm-main-content .tm-team-description-container h2{
+        color: #373ed8;
+        font-size: 6vw;
+    }
+    .flex-2-col .flex-item img{
+        width: 100%;
+    }
+    .tm-main-content .tm-team-description-container{
+        align-self: flex-start;
+        padding-top: 0px;
+    }
+    #home .tm-banner-inner{
+        padding: 50px 0 50px 0;
+    }
+}
+p::first-letter {
+    font-size: 30px; color: #87CEFA;
+}
+section, nav, #home{
+    box-shadow: 0px 0px 5px grey;
+}
+section::before {
+    content: "";
+    position: absolute;
+    border: 25px solid transparent;
+    border-top: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 300px solid #87CEFA;
+}
+.tm-main-content .flex-2-col{
+    display: flex;
+}
+.flex-2-col .flex-item{
+    align-self: center;
+}
+.flex-2-col .flex-item img{
+    max-width: 100%;
+}
+#tmCarousel h2:first-child {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+h2 + p{
+ font-style: italic;
+}
+body section p{
+    text-indent: 20px;
+    line-height: 200%;
+    text-align: left;
+}
+#home .tm-banner-inner{
+    background: #fff;
+}
+#home .tm-banner{
+    background: #f5f5f5;
+}
+.tm-content-box .padding-medium ol a:visited {
+    text-decoration: underline;
+}
+.tm-content-box .padding-medium ol a:hover {
+    color: #31b0d5;
+    text-decoration: underline double;
+}
+#about ul .tm-box-bg-title:hover{
+    color: white;
+    background: #6bc7f1;
+}
+.tm-content-box .padding-medium ol li:first-child::after{
+    content: "New";
+    color:red;
+    vertical-align: super;
+    font-size: 0.7vw;
+    text-decoration: none;
+}
+.tm-content-box .padding-medium ol li:nth-child(3)::after{
+    content: "New";
+    color:red;
+    vertical-align: super;
+    font-size: 0.7vw;
+    text-decoration: none;
+}
+.blocks{
+    background: white;
+}
+.blocks .tm-content-box .gallery-container li{
+    padding: 10px;
+}
+.blocks .tm-content-box .gallery-container li:nth-child(2n){
+    background: #F5F5F5;
+    font-style: italic;
+    color: black;
+}
+.blocks .tm-content-box .gallery-container p::first-letter {
+    font-size: 30px; color: black;
+}
+.blocks .tm-content-box .gallery-container p{
+    text-indent: 0;
+}
+body #contact form .mandatory-field::after{
+    content:"*";
+    color: red;
+    position: absolute;
+}
+body #contact form button{
+    background-color: transparent;
+    border: solid 1px #6bc7f1;
+    color: #6bc7f1;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 0;
+    float:right;
+}
+body #contact form button:hover {
+    background-color: #6bc7f1;
+    color: white;
+}
+body div div .tm-main-nav ul li:hover{
+    background:#F5F5F5;
+}
