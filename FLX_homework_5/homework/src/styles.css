@@ -1,1 +1,530 @@
-*{margin: 0;padding: 0;border: 0;text-decoration: none;}  body {background: #0b192f;font-family: roboto;font-weight: lighter;width: 100%;}  #btn-box{display: none;margin-top:4vh;margin-bottom: 4vh;}  #btn::before, #btn::after, #btn{position: absolute;width: 20px;height: 2px;background: #ffffff;}  #btn::before{content: "";display: block;transform: translateY(-6px);}  #btn::after{content: "";display: block;transform: translateY(6px);}  .post-1 {background: #B71757;}  .post-2 {background: #0D7E71;}  .post-3 {background: #b1660e;}  .post-4 {background: #d12767;}  .post-5 {background: #2d95bb;}  #sidebar div{background: #ffffff;}  header{background: #162b4d;width: 100%;}  .logo span{color: #B71757;}  img{max-width: 100%;transition: 0.5s;}  h1{font-weight: lighter;color: #ffffff;transition: 0.5s;}  p{transition: 0.5s;}  h2{font-weight: lighter;}  .posts>div{color: #ffffff;display: flex;justify-content: space-between;align-items: center;cursor: pointer;}  #content .posts img:hover{filter: opacity(50%);cursor: pointer;transition: 0.5s;}  #sidebar{display: flex;flex-direction: column;}  @media screen and (min-width: 1px) {  header{display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 1.5vh;}  #btn-box{margin-top:7vh;margin-bottom: 7vh;cursor: pointer;display: block;}  #btn::before, #btn::after, #btn{display: inline;}  header .logo{font-size: 5vh;padding-bottom: 7vh;}  header nav{display: none;}  .container{padding: 0 1.5vh;overflow: hidden;}  #content{display: flex;flex-direction: column;width: 100%;align-items: stretch;}  .posts>div{flex-direction: column;}  .posts img{max-width: 100%;width: 100%;height: 100%;}  .near-img{display: flex;flex-direction: column;justify-content: stretch;align-items: normal;align-self: normal;padding: 2vh;}  .posts>div h1{font-size: 5vh;line-height: 5.5vh;color: rgba(255, 255, 255, 0.8);}  .posts>div p{padding-top: 2.3vh;font-size: 1.9vh;line-height: 2.5vh;color: rgba(255, 255, 255, 0.6);}  #content .posts .date{display: flex;flex-direction: column;justify-content: space-around;align-items: center;padding: 5vh 0 0.5vh 0;color: rgba(255, 255, 255, 0.3);}  #content .posts .date .day{font-size: 4.5vh;}  #content .posts .date .month{font-size: 2.8vh;}  #sidebar img{width: 100%;}  #sidebar>div{width: 100%;margin-bottom: 3vh;}  #sidebar .text{padding: 3vh 2vw 4vh;}  #sidebar .text h2{font-size: 3.3vh;line-height: 3.3vh;padding-bottom: 2vh;cursor: pointer;}  #sidebar .text p{font-size: 1.8vh;line-height: 3vh;}  footer{background: #162b4d;margin-top: 3vh;display: flex;flex-direction: column;text-align: center;font-size: 2vh;line-height: 2.5vh;padding: 3vh;color: rgba(255, 255, 255, 0.5);box-sizing: border-box;width: 100%;}  }  @media screen and (min-width: 480px) {  header{margin-bottom: 2.5vw;}  #btn-box{display: block;}  header nav{display: none;}  header .logo{font-size: 5vw;cursor: pointer;}  .container{padding: 0 2vh;}  #content{display: flex;flex-direction: row;width: 100%;align-items: stretch;}  #content .posts .date .day{font-size: 5vw;}  #content .posts .date .month{font-size: 4vw;}  .posts>div p{padding-top: 2.3vh;font-size: 3vw;line-height: 5vw;color: rgba(255, 255, 255, 0.7);}  .posts>div h1{font-size: 6.5vw;line-height: 7.5vw;}  .posts{width: 58%;margin-right: 2%;}  #sidebar{width: 40%;}  #sidebar img{width: 100%;cursor: pointer;}  #sidebar>div{width: 100%;margin-bottom: 3vh;}  #sidebar .text{padding: 3vh 2.5vw 4vh;align-self: stretch;}  #sidebar .text h2{font-size: 3.5vw;line-height: 4.5vw;padding-bottom: 1vw;cursor: pointer;}  #sidebar .text p{font-size: 2vw;line-height: 3.8vw;}  footer{padding: 5vw 0;font-size: 2vw;line-height: 3vw;box-sizing: border-box;width: 100%;}  }  @media screen and (min-width: 768px) {  header{display: flex;justify-content: space-around;flex-direction: row;align-items: center;margin-bottom: 2vw;}  #btn-box{display: none;}  header .logo{font-size: 3.5vw;margin: 0;padding-left: 2vw;padding-bottom: 0;}  header img{display: none;}  header nav{display: flex;margin-left:auto;justify-content: stretch;align-items: center;padding-right: 3vw;}  header nav a{text-decoration: none;color: #ffffff;padding: 3.4vw 1.7vw 3.4vw 1.7vw;font-size: 1.1vw;transition: 0.5s;}  nav a:hover{background: rgb(28, 67, 109);}  .container{padding: 0 13vw;}  #content{display: flex;flex-direction: row;width: 100%;align-items: stretch;}  .posts{margin: 0 1.5vw 0 0;width: 100%;}  #content .posts>div .text{display: flex;flex-direction: column;justify-content: center;align-items: flex-start;width: 85%;transition: 0.5s;}  #content .posts>div .text:hover{opacity: .5;}  #content .posts>div .near-img:hover{align-self: normal;background: rgba(0,0,0,.1);}  .posts>div{flex-direction: row;justify-content: center;cursor: pointer;}  .image{align-self: normal;width: 50%;box-sizing: border-box;}  .posts img{max-width: 100%;}  #content .posts .near-img{display: flex;flex-direction: row;align-self: normal;width: 50%;box-sizing: border-box;flex: 2;}  #content .posts .date{display: flex;flex-direction: column;justify-content: space-around;align-items: center;align-self: flex-start;margin-left: auto;padding: 1vw;font-size: 3vw;color: rgba(255, 255, 255, 0.3);width: 15%;}  #content .posts .date .day{font-size: 3.1vw;}  #content .posts .date .month{font-size: 1.7vw;}  .posts>div p{padding-top: 2.3vh;font-size: 1vw;line-height: 1.4vw;color: rgba(255, 255, 255, 0.7);}  .posts>div h1{font-size: 2.5vw;line-height: 2.5vw;}  #sidebar img{width: 100%;cursor: pointer;}  #sidebar>div{width: 100%;margin-bottom: 3vh;}  #sidebar .text{padding: 3vh 2vw 4vh;}  #sidebar .text h2{font-size: 2vw;line-height: 2.5vw;padding-bottom: 1vw;cursor: pointer;}  #sidebar .text p{font-size: 1.1vw;line-height: 1.5vw;}  #content .posts>div:nth-child(even){display: flex;flex-direction: row-reverse;justify-content: space-between;}  #content .posts>div:nth-child(even) .near-img{flex-direction: row-reverse;text-align: right;}  .posts{width: 72%;margin-right: 3%;}  #sidebar{width: 25%;}  footer{background: #162b4d;margin-top: 3vh;width: 100%;display: flex;flex-direction: row;justify-content: space-between;font-size: 1.1vw;line-height: 1.7vw;padding: 3vh;color: rgba(255, 255, 255, 0.4);text-align: left;}  }
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body {
+    background: #0b192f;
+    font-family: roboto;
+    font-weight: lighter;
+    width: 100%;
+}
+
+#btn-box {
+    display: none;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+#btn::before, #btn::after, #btn {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+#btn::before {
+    content: "";
+    display: block;
+    transform: translateY(-6px);
+}
+
+#btn::after {
+    content: "";
+    display: block;
+    transform: translateY(6px);
+}
+
+.post-1 {
+    background: #B71757;
+}
+
+.post-2 {
+    background: #0D7E71;
+}
+
+.post-3 {
+    background: #b1660e;
+}
+
+.post-4 {
+    background: #d12767;
+}
+
+.post-5 {
+    background: #2d95bb;
+}
+
+#sidebar div {
+    background: #ffffff;
+}
+
+header {
+    background: #162b4d;
+    width: 100%;
+}
+
+.logo span {
+    color: #B71757;
+}
+
+img {
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+h1 {
+    font-weight: lighter;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+p {
+    transition: 0.5s;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.posts > div {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#content .posts img:hover {
+    filter: opacity(50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1px) {
+    header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1.5vh;
+    }
+
+    #btn-box {
+        margin-top: 7vh;
+        margin-bottom: 7vh;
+        cursor: pointer;
+        display: block;
+    }
+
+    #btn::before, #btn::after, #btn {
+        display: inline;
+    }
+
+    header .logo {
+        font-size: 5vh;
+        padding-bottom: 7vh;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .container {
+        padding: 0 1.5vh;
+        overflow: hidden;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .posts > div {
+        flex-direction: column;
+    }
+
+    .posts img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .near-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: normal;
+        align-self: normal;
+        padding: 2vh;
+    }
+
+    .posts > div h1 {
+        font-size: 5vh;
+        line-height: 5.5vh;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .posts > div p {
+        padding-top: 2.3vh;
+        font-size: 1.9vh;
+        line-height: 2.5vh;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #content .posts .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5vh 0 0.5vh 0;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    #content .posts .date .day {
+        font-size: 4.5vh;
+    }
+
+    #content .posts .date .month {
+        font-size: 2.8vh;
+    }
+
+    #sidebar img {
+        width: 100%;
+    }
+
+    #sidebar > div {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    #sidebar .text {
+        padding: 3vh 2vw 4vh;
+    }
+
+    #sidebar .text h2 {
+        font-size: 3.3vh;
+        line-height: 3.3vh;
+        padding-bottom: 2vh;
+        cursor: pointer;
+    }
+
+    #sidebar .text p {
+        font-size: 1.8vh;
+        line-height: 3vh;
+    }
+
+    footer {
+        background: #162b4d;
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 2vh;
+        line-height: 2.5vh;
+        padding: 3vh;
+        color: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    header {
+        margin-bottom: 2.5vw;
+    }
+
+    #btn-box {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .logo {
+        font-size: 5vw;
+        cursor: pointer;
+    }
+
+    .container {
+        padding: 0 2vh;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    #content .posts .date .day {
+        font-size: 5vw;
+    }
+
+    #content .posts .date .month {
+        font-size: 4vw;
+    }
+
+    .posts > div p {
+        padding-top: 2.3vh;
+        font-size: 3vw;
+        line-height: 5vw;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .posts > div h1 {
+        font-size: 6.5vw;
+        line-height: 7.5vw;
+    }
+
+    .posts {
+        width: 58%;
+        margin-right: 2%;
+    }
+
+    #sidebar {
+        width: 40%;
+    }
+
+    #sidebar img {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    #sidebar > div {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    #sidebar .text {
+        padding: 3vh 2.5vw 4vh;
+        align-self: stretch;
+    }
+
+    #sidebar .text h2 {
+        font-size: 3.5vw;
+        line-height: 4.5vw;
+        padding-bottom: 1vw;
+        cursor: pointer;
+    }
+
+    #sidebar .text p {
+        font-size: 2vw;
+        line-height: 3.8vw;
+    }
+
+    footer {
+        padding: 5vw 0;
+        font-size: 2vw;
+        line-height: 3vw;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 2vw;
+    }
+
+    #btn-box {
+        display: none;
+    }
+
+    header .logo {
+        font-size: 3.5vw;
+        margin: 0;
+        padding-left: 2vw;
+        padding-bottom: 0;
+    }
+
+    header img {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        margin-left: auto;
+        justify-content: stretch;
+        align-items: center;
+        padding-right: 3vw;
+    }
+
+    header nav a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 3.4vw 1.7vw 3.4vw 1.7vw;
+        font-size: 1.1vw;
+        transition: 0.5s;
+    }
+
+    nav a:hover {
+        background: rgb(28, 67, 109);
+    }
+
+    .container {
+        padding: 0 13vw;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .posts {
+        margin: 0 1.5vw 0 0;
+        width: 100%;
+    }
+
+    #content .posts > div .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 85%;
+        transition: 0.5s;
+    }
+
+    #content .posts > div .text:hover {
+        opacity: .5;
+    }
+
+    #content .posts > div .near-img:hover {
+        align-self: normal;
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .posts > div {
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .image {
+        align-self: normal;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .posts img {
+        max-width: 100%;
+    }
+
+    #content .posts .near-img {
+        display: flex;
+        flex-direction: row;
+        align-self: normal;
+        width: 50%;
+        box-sizing: border-box;
+        flex: 2;
+    }
+
+    #content .posts .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-self: flex-start;
+        margin-left: auto;
+        padding: 1vw;
+        font-size: 3vw;
+        color: rgba(255, 255, 255, 0.3);
+        width: 15%;
+    }
+
+    #content .posts .date .day {
+        font-size: 3.1vw;
+    }
+
+    #content .posts .date .month {
+        font-size: 1.7vw;
+    }
+
+    .posts > div p {
+        padding-top: 2.3vh;
+        font-size: 1vw;
+        line-height: 1.4vw;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .posts > div h1 {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+    }
+
+    #sidebar img {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    #sidebar > div {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    #sidebar .text {
+        padding: 3vh 2vw 4vh;
+    }
+
+    #sidebar .text h2 {
+        font-size: 2vw;
+        line-height: 2.5vw;
+        padding-bottom: 1vw;
+        cursor: pointer;
+    }
+
+    #sidebar .text p {
+        font-size: 1.1vw;
+        line-height: 1.5vw;
+    }
+
+    #content .posts > div:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #content .posts > div:nth-child(even) .near-img {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .posts {
+        width: 72%;
+        margin-right: 3%;
+    }
+
+    #sidebar {
+        width: 25%;
+    }
+
+    footer {
+        background: #162b4d;
+        margin-top: 3vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.1vw;
+        line-height: 1.7vw;
+        padding: 3vh;
+        color: rgba(255, 255, 255, 0.4);
+        text-align: left;
+    }
+}
