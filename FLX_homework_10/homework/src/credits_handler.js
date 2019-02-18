@@ -1,15 +1,7 @@
-const magicNumbers = {
-    'maxLengthOfCardsArr': 3,
-    'one': 1,
-    'two': 2,
-    'minLengthOfCardsArr': 0,
-    'fifty': 50,
-    'threeHundred': 300,
-    'fiveHundred': 500,
-    'eightHundred': 800
-};
 function userCard(index) {
-    if (index <= magicNumbers.maxLengthOfCardsArr && index > magicNumbers.minLengthOfCardsArr) {
+        const maxLengthOfCardsArr = 3,
+            minLengthOfCardsArr = 0;
+    if (index <= maxLengthOfCardsArr && index > minLengthOfCardsArr) {
     return {
        options: {
             'balance': 100,
@@ -86,35 +78,39 @@ function userCard(index) {
 class UserAccount {
     constructor (name) {
         this.name = name,
-        this.cards = []
+        this.cards = [],
+        this.mimLengthOfCardsArr = 0,
+        this.cardNumber1 = 1,
+        this.cardNumber2 = 2,
+        this.maxLengthOfCardsArr = 3
     }
     addCard() {
-        if(this.cards.length === magicNumbers.minLengthOfCardsArr) {
-           return this.cards.push(userCard(magicNumbers.one));
-        } else if (this.cards.length === magicNumbers.one) {
-            return this.cards.push(userCard(magicNumbers.two));
-        } else if (this.cards.length === magicNumbers.two) {
-            return this.cards.push(userCard(magicNumbers.maxLengthOfCardsArr));
+        if(this.cards.length === this.mimLengthOfCardsArr) {
+           return this.cards.push(userCard(this.cardNumber1));
+        } else if (this.cards.length === this.cardNumber1) {
+            return this.cards.push(userCard(this.cardNumber1));
+        } else if (this.cards.length === this.cardNumber2) {
+            return this.cards.push(userCard(this.maxLengthOfCardsArr));
         } else {
             return false;
         }
     }
     getCardByKey(num) {
-           return this.cards[num - magicNumbers.one];
+           return this.cards[num - this.cardNumber1];
         }
 }
-let user = new UserAccount('Bob');
-user.addCard();
-user.addCard();
-
-let card1 = user.getCardByKey(magicNumbers.one);
-let card2 = user.getCardByKey(magicNumbers.two);
-
-card1.putCredits(magicNumbers.fiveHundred);
-card1.setTransactionLimit(magicNumbers.eightHundred);
-card1.transferCredits(magicNumbers.threeHundred, card2);
-
-card2.takeCredits(magicNumbers.fifty);
-
-console.log(card1.getCardOptions());
-console.log(card2.getCardOptions());
+// let user = new UserAccount('Bob');
+// user.addCard();
+// user.addCard();
+//
+// let card1 = user.getCardByKey(1);
+// let card2 = user.getCardByKey(2);
+// console.log(user);
+// card1.putCredits(500);
+// card1.setTransactionLimit(800);
+// card1.transferCredits(300, card2);
+//
+// card2.takeCredits(50);
+//
+// console.log(card1.getCardOptions());
+// console.log(card2.getCardOptions());
