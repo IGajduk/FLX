@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    outline: none;
+    font-family: 'Roboto';
+    border: none;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header1 {
+    font-weight: lighter;
+    padding: 20px;
+    text-align: center;
+}
+
+.add-todo-div {
+    display: flex;
+    box-sizing: border-box;
+    width: 60vw;
+    padding: 0 0 20px 20px;
+    border-bottom: 3px solid black;
+}
+
+.add {
+    border-radius: 10%;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#todo-input {
+    width: 61vw;
+    margin-right: 15px;
+    padding-left: 3px;
+    border: 1px solid black;
+}
+
+#main {
+    padding: 20px 0 20px 20px;
+    width: 58vw;
+    min-height: 47vh;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.one-of-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.drop-place {
+    z-index: -10;
+    height: 44px;
+    width: 57.5vw;
+    border: dotted 3px red;
+    order: 1;
+    min-width: 100%;
+}
+
+.checkbox {
+    border-radius: 10%;
+    background: #000000;
+    color: #ffffff;
+    width: 24px;
+    cursor: pointer;
+}
+
+.checkbox-empty {
+    width: 18px;
+    height: 18px;
+    border: 3px solid black;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.text-todo-list {
+    padding-left: 15px;
+    align-self: center;
+    margin-right: auto;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+#footer {
+    padding: 20px 0;
+}
+
+.footer-img {
+    width: 110px;
+}
+
+.droptarget {
+    cursor: move;
+}
