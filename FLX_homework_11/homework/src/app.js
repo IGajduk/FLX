@@ -4,7 +4,6 @@ const inputTodo = document.getElementById('todo-input'),
     newEmptyCheckbox = document.createElement('i'),
     newTextOfOneOfTodo = document.createElement('p'),
     newDeleteBtn = document.createElement('i'),
-    one = 1,
     maxLengthOfList = 10,
     oneHundred = 100,
     addOneTodoBtn = document.getElementById('add-one-todo');
@@ -120,30 +119,15 @@ function fillNewDeleteBtn() {
     return newDeleteBtn;
 }
 
-function genId(id) {
-    if (divTodoWithTodoLists.children.length < one) {
-        return id;
-    } else {
-        for (const elem of divTodoWithTodoLists.children) {
-            if (elem.id === id) {
-                let random = Math.ceil(Math.random() * oneHundred);
-                if (elem.id === `drag${random}q`) {
-                    let random1 = Math.ceil(Math.random() * oneHundred);
-                    return `drag${random}y`;
-                } else {
-                    return `drag${random}q`;
-                }
-            } else {
-                return id;
-            }
-        }
-    }
+function idMaker() {
+    return new Date().getDate() * new Date().getMonth() * new Date().getHours() *
+        new Date().getMinutes() * new Date().getMilliseconds() * new Date().getFullYear()
 }
 
 function fillNewOneOfTheList() {
     newOneOfTheList.setAttribute('class', 'one-of-list droptarget');
     newOneOfTheList.setAttribute('draggable', 'true');
-    newOneOfTheList.setAttribute('id', `${genId(`drag${Math.ceil(Math.random() * oneHundred)}`)}`);
+    newOneOfTheList.setAttribute('id', `drag${idMaker()}`);
     newOneOfTheList.appendChild(fillNewEmptyCheckbox());
     newOneOfTheList.appendChild(fillNewTextOfOneOfTodo());
     newOneOfTheList.appendChild(fillNewDeleteBtn());
