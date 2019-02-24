@@ -1,12 +1,12 @@
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    background: none;
-    outline: none;
-    font-family: 'Roboto';
-    border: none;
-}
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
+     background: none;
+     outline: none;
+     font-family: 'Roboto';
+     border: none;
+ }
 
 #root {
     display: flex;
@@ -62,15 +62,6 @@
     padding-bottom: 10px;
     padding-top: 10px;
     transition: 0.5s;
-}
-
-.drop-place {
-    z-index: -10;
-    height: 44px;
-    width: 57.5vw;
-    border: dotted 3px red;
-    order: 1;
-    min-width: 100%;
 }
 
 .checkbox {
