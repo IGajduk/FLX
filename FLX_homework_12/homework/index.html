@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 12 - Simple TODO List</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="root">
+
+    <div id="header">
+
+        <h1 id="home" class="header-text">TODO List</h1>
+        <a href="#/add-new-item" id="add-new-task">+ Add new task</a>
+    </div>
+
+    <div id="main">
+        <div id="list">
+        </div>
+        <div id="checked-list">
+        </div>
+    </div>
+
+    <div id="add-new-item">
+        <div class="single-todo">
+            <textarea name="todo-create-input" id="add-todo-input" class="todo-textarea" placeholder="Add New Task"></textarea>
+            <div class="buttons-div">
+                <button id="cancel-add-todo-btn" class="btn">Cancel</button>
+                <button id="add-todo-btn" class="btn">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-todo">
+        <div class="single-todo">
+            <textarea name="todo-edit-input" id="edit-todo-input" class="todo-textarea "></textarea>
+            <div class="buttons-div">
+                <button id="cancel-edit-todo-btn" class="btn">Cancel</button>
+                <button id="edit-todo-btn" class="btn save-changes">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./src/app.js"></script>
+</body>
+</html>

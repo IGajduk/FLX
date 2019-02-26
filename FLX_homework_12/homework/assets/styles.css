@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    align-items: center;
+    padding: 2% 2%;
+    max-width: 100%;
+    border-bottom: #000000 solid 3px;
+}
+
+.header-text {
+    font-weight: lighter;
+    padding: 5px 20px;
+    text-align: center;
+    color: #000000;
+    border-radius: 5%;
+}
+
+#add-new-task {
+    padding: 5px 15px;
+    margin-left: auto;
+    background: #000000;
+    border-radius: 5%;
+    color: #ffffff;
+}
+
+#add-new-task:hover {
+    box-shadow: 1px 1px 1px 1px #808080;
+}
+
+.add-todo-div {
+    display: flex;
+    box-sizing: border-box;
+    width: 60vw;
+    padding: 0 20px 20px 20px;
+    border-bottom: 3px solid #000000;
+}
+
+#main {
+    max-width: 100%;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#checked-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one-of-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    align-items: start;
+    max-width: 60%;
+    padding-top: 20px;
+}
+
+.todo-text {
+    color: #000000;
+    padding: 0 10px;
+    max-width: 60vw;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+.todo-text:hover {
+    color: #8b0000;
+}
+
+.todo-icons {
+    max-width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.todo-icons:hover {
+    filter: brightness(150%);
+}
+
+.single-todo {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 90vw;
+}
+
+#add-new-item {
+    display: none;
+}
+
+#edit-todo {
+    display: none;
+}
+
+.todo-textarea {
+    min-height: 200px;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    border: 1px solid black;
+}
+
+.btn {
+    align-self: flex-end;
+    border-radius: 5px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    max-width: 100%;
+    margin-left: 10px;
+    padding: 15px 40px;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 1px 1px #808080;
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.disassembled {
+    filter: brightness(50%);
+    border-radius: 50%;
+}
+
+.disassembled:hover {
+    filter: brightness(50%);
+}
