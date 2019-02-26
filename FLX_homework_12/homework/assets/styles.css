@@ -81,7 +81,7 @@
 .todo-text {
     color: #000000;
     padding: 0 10px;
-    max-width: 60vw;
+    width: 60vw;
     cursor: pointer;
     word-wrap: break-word;
 }
